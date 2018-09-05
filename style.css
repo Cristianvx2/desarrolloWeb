@@ -1,0 +1,134 @@
+body, html
+{
+    width: 100%;
+    height: 100%;
+    min-width: 300px;
+    min-height: 500px;
+    background: white;
+}
+header
+{
+    padding-top: 50px;
+}
+hr
+{
+    max-width: 200px;
+    border-width: 3px;
+    border-color: #F05F40;
+}
+
+/*-----------------------------Navigation bar-------------------------------------  */
+.navbar
+{
+    background-color:#348cb2;
+    opacity: 0.6;
+    height: 30px;
+}
+#text_menu_nav li a
+{
+    color: white;
+    font-size: 14px
+}
+
+#text_menu_nav li a.nav-link:hover,
+#text_menu_nav li a.nav-link:focus:hover
+{
+    color: black;
+}
+
+.logo
+{
+    height: 40px;
+    font-weight: bolder;
+    font-size: 14px;
+    color:#990000;
+}
+
+/*-----------------------------background animation-------------------------------------  */
+#background-animated
+{
+
+    /*imagen de fondo width = 150% */
+    background:#348cb2 url(images/bg.jpg) repeat 0 0;
+    background-size: 150% 100%; 
+    
+    /*div container */
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    margin: 0;
+    padding: 0;
+
+    -webkit-animation: slide 120s linear infinite;
+    animation: slide 120s linear infinite;
+}
+@keyframes slide{from {background-position:0 0;} to {background-position: -2250px 0;}}
+@-webkit-keyframes slide {from {background-position: 0 0;} to {background-position: -2250px 0;}
+    /*otra forma de indicar donde comienza y donde termina la animacion
+    0% { -webkit-transform: translate3d(0,0,0);} 
+    100% {-webkit-transform: translate3d(-2250px,0,0);} */}
+
+/* glass-layer */
+@-webkit-keyframes glass-layer { 0% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes glass-layer { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+#glass-layer {
+    -webkit-animation: glass-layer 1.5s 1.5s forwards;
+    animation: glass-layer 1.5s 1.5s forwards;
+    /*background-attachment: fixed, fixed;-- se mueve con la pagina*/
+    background-image: url("images/overlay-pattern.png"), url("images/overlay.svg");
+    background-position: top left, center center;
+    background-size: cover;
+    
+    
+    height: 100%;
+    opacity: 0;
+    width: 100%;
+}
+@media screen and (max-width:600px) and (max-height:600px)
+{
+    #background-animated
+    {
+        width: 100%;
+        height: 45%;
+    }
+    #glass-layer
+    {
+        width: 100%;
+        height: 45%;
+    }
+    hr
+    {
+        max-width: 100px;
+    }
+}
+/*----------------------------- Header-------------------------------------  */
+#image-div
+{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    opacity: 1;
+}
+
+.round-image
+{
+    border-color: white;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 100%;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header-text
+{
+    color: white;
+    background-color: #d32f2f;
+    text-align: center;
+    opacity: 1;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px 30px;
+}
